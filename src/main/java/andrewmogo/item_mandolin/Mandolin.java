@@ -2,8 +2,11 @@ package andrewmogo.item_mandolin;
 
 
 import andrewmogo.Sounds.SoundRegistrator;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.item.EntityEnderPearl;
+import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
@@ -34,14 +37,14 @@ public class Mandolin extends Item
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         // IMPORTANT! Only spawn new entities on the server. If the world is not remote,
         // that means you are on the server:
-//       if (!world.isRemote) {
-//            world.spawnEntityInWorld(new EntityThrowingRock(world, player));
-//        }
-        System.out.println("Right Clicked");
+       if (!worldIn.isRemote) {
+           EntityEnderPearl entityenderpearl = new EntityEnderPearl(worldIn, playerIn);
+           entityenderpearl.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 3F, 0.0F);
+           worldIn.spawnEntity(entityenderpearl);
+        }
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 
         worldIn.playSound((EntityPlayer) null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundRegistrator.guitarSound, SoundCategory.PLAYERS, 1.0F, 1.0F);
-//        worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.BLOCK_LAVA_EXTINGUISH, SoundCategory.BLOCKS, 1.0F, 1.0F );
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
 
 
