@@ -1,0 +1,6 @@
+The Mandolin
+
+How it will work:
+    -You'll "play" some notes using keys (maybe numpad?), then that will cause a certain spell to be cast
+    -Right clicking could play a simple spell that's really useful (maybe teleport or fireball?)
+    -Maybe you'll have to "learn" a song ingame before you can play it? So you're forced to start off with simple spells
