@@ -1,6 +1,8 @@
 package andrewmogo;
 
+import andrewmogo.Sounds.SoundRegisterListener;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.common.MinecraftForge;
 
 /**
  * CommonProxy is used to set up the mod and start it running.  It contains all the code that should run on both the
@@ -18,6 +20,7 @@ public abstract class CommonProxy {
         // This should call the preInitCommon() of all the items/blocks
 
         andrewmogo.item_mandolin.StartupCommon.preInitCommon();
+        MinecraftForge.EVENT_BUS.register(new SoundRegisterListener());
     }
 
     /**
