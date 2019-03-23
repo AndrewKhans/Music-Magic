@@ -2,8 +2,11 @@ package andrewmogo;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import org.lwjgl.input.Keyboard;
 
 /**
  * ClientProxy is used to set up the mod and start it running on normal minecraft.  It contains all the code that should run on the
@@ -12,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
  */
 public class ClientOnlyProxy extends CommonProxy
 {
+    public static KeyBinding[] keyBindings;
 
     /**
      * Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry
@@ -28,6 +32,19 @@ public class ClientOnlyProxy extends CommonProxy
      */
     public void init()
     {
+        // declare an array of key bindings
+        keyBindings = new KeyBinding[2];
+
+        // instantiate the key bindings
+        keyBindings[0] = new KeyBinding("key.note1.desc", Keyboard.KEY_Z, "key.musicmagic.category");
+        keyBindings[1] = new KeyBinding("key.note2.desc", Keyboard.KEY_X, "key.musicmagic.category");
+
+        // register all the key bindings
+        for (int i = 0; i < keyBindings.length; ++i)
+        {
+            ClientRegistry.registerKeyBinding(keyBindings[i]);
+        }
+
         super.init();
         andrewmogo.item_mandolin.StartupClientOnly.initClientOnly();
     }
