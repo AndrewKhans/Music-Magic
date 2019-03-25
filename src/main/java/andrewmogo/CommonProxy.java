@@ -3,6 +3,8 @@ package andrewmogo;
 import andrewmogo.Sounds.SoundRegisterListener;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 
 /**
  * CommonProxy is used to set up the mod and start it running.  It contains all the code that should run on both the
@@ -18,9 +20,10 @@ public abstract class CommonProxy {
     {
         //read config first
         // This should call the preInitCommon() of all the items/blocks
-
-        andrewmogo.item_mandolin.StartupCommon.preInitCommon();
         MinecraftForge.EVENT_BUS.register(new SoundRegisterListener());
+        andrewmogo.item_mandolin.StartupCommon.preInitCommon();
+
+
     }
 
     /**
@@ -29,7 +32,7 @@ public abstract class CommonProxy {
      */
     public void init()
     {
-        // THis should call the initCommon of all the items/blocks
+        // This should call the initCommon of all the items/blocks
         andrewmogo.item_mandolin.StartupCommon.initCommon();
 
     }
@@ -39,6 +42,7 @@ public abstract class CommonProxy {
      */
     public void postInit()
     {
+
         // This should call the postInitCommon() of each item/block
         andrewmogo.item_mandolin.StartupCommon.postInitCommon();
 

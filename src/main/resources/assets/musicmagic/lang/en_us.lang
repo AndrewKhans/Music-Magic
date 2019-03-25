@@ -1,4 +1,5 @@
-item.mandolin_item_unlocalised_name.name = Mandolin
-key.note1.desc=Note1
-key.note2=Note2
-key.musicmagic.category = MusicMagic
+item.mandolin_item_unlocalised_name.name=Mandolin
+
+key.note1.desc=Note 1
+key.note2.desc=Note 2
+key.musicmagic.category=Music Magic

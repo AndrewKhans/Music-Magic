@@ -1,8 +1,10 @@
 package andrewmogo.item_mandolin;
 
 
+import andrewmogo.ClientOnlyProxy;
 import andrewmogo.Sounds.SoundRegistrator;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityEnderPearl;
@@ -18,6 +20,10 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.InputEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
@@ -28,29 +34,13 @@ import java.util.List;
 public class Mandolin extends Item
 {
 
+    ResourceLocation location = new ResourceLocation("musicmagic", "guitar_noise.ogg");
+    SoundEvent event = new SoundEvent(location);
+
     public Mandolin() {
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTabs.TOOLS);
     }
-
-    ResourceLocation location = new ResourceLocation("musicmagic", "guitar_noise.ogg");
-    SoundEvent event = new SoundEvent(location);
-
-
-//    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-//        // IMPORTANT! Only spawn new entities on the server. If the world is not remote,
-//        // that means you are on the server:
-//       if (!worldIn.isRemote) {
-//           EntityEnderPearl entityenderpearl = new EntityEnderPearl(worldIn, playerIn);
-//           entityenderpearl.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 3F, 0.0F);
-//           worldIn.spawnEntity(entityenderpearl);
-//        }
-//        ItemStack itemstack = playerIn.getHeldItem(handIn);
-//
-//        worldIn.playSound((EntityPlayer) null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundRegistrator.guitarSound, SoundCategory.PLAYERS, 1.0F, 1.0F);
-//        return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemstack);
-//
-//    }
 
     // This onItemRightClick code is mainly taken from "Not Enough Wands" (https://github.com/romelo333/notenoughwands1.8.8)
 
@@ -123,19 +113,37 @@ public class Mandolin extends Item
         return ActionResult.newResult(EnumActionResult.PASS, stack);
     }
 
-    /*
+
     @Override
     public void addInformation(ItemStack stack, World player, List list, ITooltipFlag b) {
         super.addInformation(stack, player, list, b);
-        list.add("Right click to teleport forward");
-        list.add("until a block is hit or maximum");
-        list.add("distance is reached.");
-        if ( If you know a certain spell ) {     // If you know a certain spell, add it to the tooltip
-            list.add("Sneak to teleport through walls");
-        } else {
-            list.add("Sneak for half distance");
+        list.add("Note 1: C");
+        list.add("Note 2: D");
+        list.add("Note 3: E");
+//        if ( If you know a certain spell ) {     // If you know a certain spell, add it to the tooltip
+//            list.add("Sneak to teleport through walls");
+//        } else {
+//            list.add("Sneak for half distance");
+//        }
+    }
+
+    /*
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        System.out.println("Key Input Event");
+
+        // make local copy of key binding array
+        KeyBinding[] keyBindings = ClientOnlyProxy.keyBindings;
+
+        // check each enumerated key binding type for pressed and take appropriate action
+        if (keyBindings[0].isPressed()) {
+            // DEBUG
+            System.out.println("Key binding =" + keyBindings[0].getKeyDescription());
+
+            // do stuff for this key binding here
+            // remember you may need to send packet to server
         }
+
     }
     */
-
 }

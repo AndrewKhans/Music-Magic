@@ -5,6 +5,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import org.lwjgl.input.Keyboard;
 
@@ -46,6 +47,7 @@ public class ClientOnlyProxy extends CommonProxy
         }
 
         super.init();
+
         andrewmogo.item_mandolin.StartupClientOnly.initClientOnly();
     }
 
