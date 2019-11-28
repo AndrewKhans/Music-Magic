@@ -1,5 +1,6 @@
 item.mandolin_item_unlocalised_name.name=Mandolin
 
-key.note1.desc=Note 1
-key.note2.desc=Note 2
+key.note1.desc=Strum String 1
+key.note2.desc=Strum String 2
+key.note3.desc=Strum String 3
 key.musicmagic.category=Music Magic
