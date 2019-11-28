@@ -2,7 +2,7 @@ package andrewmogo.item_mandolin;
 
 
 import andrewmogo.ClientOnlyProxy;
-import andrewmogo.Sounds.SoundRegistrator;
+//import andrewmogo.Sounds.SoundRegistrator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.client.util.ITooltipFlag;
@@ -33,10 +33,8 @@ import java.util.List;
 
 public class Mandolin extends Item
 {
-
-    ResourceLocation location = new ResourceLocation("musicmagic", "guitar_noise.ogg");
-    SoundEvent event = new SoundEvent(location);
-    SoundCategory category;
+    private ResourceLocation location = new ResourceLocation("musicmagic", "guitarSound");
+    private SoundEvent event = new SoundEvent(location);
 
     public Mandolin() {
         this.setMaxStackSize(1);
@@ -55,8 +53,12 @@ public class Mandolin extends Item
         if (!world.isRemote) {
 
             // Play strum sound
-            world.playSound(player, player.posX, player.posY, player.posZ, event, SoundCategory.PLAYERS, 1, 1);
+            world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, event, SoundCategory.PLAYERS, 1.0F, 1.0F);
             System.out.println("Strummed!");
+
+//          world.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+
+
             // Teleport Code
 
             Vec3d lookVec = player.getLookVec();
@@ -64,7 +66,7 @@ public class Mandolin extends Item
             int distance = 50; // This is the max distance
             boolean gothrough = false;
             if (player.isSneaking()) {
-                    gothrough = true;
+                gothrough = true;
                 distance /= 2;
             }
 
@@ -121,14 +123,9 @@ public class Mandolin extends Item
     @Override
     public void addInformation(ItemStack stack, World player, List list, ITooltipFlag b) {
         super.addInformation(stack, player, list, b);
-        list.add("Note 1: C");
+        list.add("Note 1: C#");
         list.add("Note 2: D");
         list.add("Note 3: E");
-//        if ( If you know a certain spell ) {     // If you know a certain spell, add it to the tooltip
-//            list.add("Sneak to teleport through walls");
-//        } else {
-//            list.add("Sneak for half distance");
-//        }
     }
 
     /*

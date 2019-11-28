@@ -1,9 +1,9 @@
 {
-  "guitar": {
-    "category": "PLAYERS",
+  "guitarSound": {
+    "category": "players",
     "sounds": [
       {
-        "name": "musicmagic:guitar_noise",
+        "name": "musicmagic:guitarNoise",
         "stream": false
       }
     ]

@@ -1,6 +1,6 @@
 package andrewmogo;
 
-import andrewmogo.Sounds.SoundRegisterListener;
+//import andrewmogo.Sounds.SoundRegisterListener;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -20,7 +20,7 @@ public abstract class CommonProxy {
     {
         //read config first
         // This should call the preInitCommon() of all the items/blocks
-        MinecraftForge.EVENT_BUS.register(new SoundRegisterListener());
+//        MinecraftForge.EVENT_BUS.register(new SoundRegisterListener());
         andrewmogo.item_mandolin.StartupCommon.preInitCommon();
 
 
