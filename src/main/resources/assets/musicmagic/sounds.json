@@ -1,6 +1,6 @@
 {
   "guitar": {
-    "category": "player",
+    "category": "PLAYERS",
     "sounds": [
       {
         "name": "musicmagic:guitar_noise",

@@ -36,6 +36,7 @@ public class Mandolin extends Item
 
     ResourceLocation location = new ResourceLocation("musicmagic", "guitar_noise.ogg");
     SoundEvent event = new SoundEvent(location);
+    SoundCategory category;
 
     public Mandolin() {
         this.setMaxStackSize(1);
@@ -46,14 +47,18 @@ public class Mandolin extends Item
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
-            // Give infinite nausea
-        }
+//        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
+//            // Give infinite nausea
+//        }
+
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote) {
-//            if (!checkUsage(stack, player, 1.0f)) {
-//                return ActionResult.newResult(EnumActionResult.PASS, stack);
-//            }
+
+            // Play strum sound
+            world.playSound(player, player.posX, player.posY, player.posZ, event, SoundCategory.PLAYERS, 1, 1);
+            System.out.println("Strummed!");
+            // Teleport Code
+
             Vec3d lookVec = player.getLookVec();
             Vec3d start = new Vec3d(player.posX, player.posY + player.getEyeHeight(), player.posZ);
             int distance = 50; // This is the max distance
@@ -105,7 +110,6 @@ public class Mandolin extends Item
                     }
                 }
             }
-            //registerUsage(stack, player, 1.0f);
 
             // Play teleporting sound here
 
