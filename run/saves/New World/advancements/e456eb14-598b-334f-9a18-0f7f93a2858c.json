@@ -1,0 +1,11 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2019-03-22 12:44:19 -0400",
+      "forest_hills": "2019-03-22 12:44:06 -0400",
+      "plains": "2019-03-22 12:44:00 -0400",
+      "river": "2019-03-22 12:44:30 -0400"
+    },
+    "done": false
+  }
+}

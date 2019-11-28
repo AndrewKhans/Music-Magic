@@ -1,0 +1,11 @@
+{
+  "guitarSound": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:guitarNoise",
+        "stream": false
+      }
+    ]
+  }
+}

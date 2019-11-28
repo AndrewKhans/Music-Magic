@@ -1,0 +1,16 @@
+[
+{
+  "modid": "musicmagic",
+  "name": "Music Magic",
+  "description": "Allows you to interact with the magical world through the medium of music",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mogo"],
+  "credits": "Nobody",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
