@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e332bae3-7d8b-4600-a0b2-09f8416f2e10" name="Default Changelist" comment="-Added Third Guitar Key" />
+    <list default="true" id="e332bae3-7d8b-4600-a0b2-09f8416f2e10" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,19 +55,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/MusicMagic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+            <state relative-caret-position="68">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/ClientOnlyProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="731">
               <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -154,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/item_mandolin/StartupClientOnly.java" />
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/item_mandolin/StartupCommon.java" />
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/item_mandolin/MandolinItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/andrewmogo/MusicMagic.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/musicmagic/models/item/item_mandolin.json" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -172,12 +171,13 @@
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/KeyBind.java" />
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/KeyHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/andrewmogo/ClientOnlyProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/andrewmogo/MusicMagic.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="217" />
-    <option name="y" value="237" />
+    <option name="x" value="216" />
+    <option name="y" value="236" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
@@ -200,6 +200,34 @@
               <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Music Magic" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Music Magic" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Music Magic" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Music Magic" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="andrewmogo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Music Magic" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Music Magic" type="b2602c69:ProjectViewProjectNode" />
@@ -232,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574984581023" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574984594347" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gradlew.bat" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
@@ -472,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574982817796</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Test">
+      <created>1574984589333</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1574984589333</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -496,7 +531,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3555241" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3555241" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -536,7 +571,8 @@
     <MESSAGE value="-Fixed Crafting Recipe" />
     <MESSAGE value="-Mandolin Strum Now Plays" />
     <MESSAGE value="-Added Third Guitar Key" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added Third Guitar Key" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/musicmagic/models/item/item_pepisitem.json" />
@@ -738,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/MusicMagic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/item_mandolin/Mandolin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -772,11 +801,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/ClientOnlyProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="731">
           <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/andrewmogo/MusicMagic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
