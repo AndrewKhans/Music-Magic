@@ -4,3 +4,6 @@ build/
 gradle/
 out/
 run
+gradlew.bat
+gradlew
+build.gradle

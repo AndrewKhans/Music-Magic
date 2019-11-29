@@ -9,4 +9,6 @@ Piano Block:
 
   -Using it: there is 3 strings (each is a note), you configure them and press play to play the notes
 
-Wizawrd armor/robes:
+Wizard armor/robes:
+
+Removing files from github: add it to .gitignore, and do "git rm -r --cached .idea" in terminal, where .idea is the filename
