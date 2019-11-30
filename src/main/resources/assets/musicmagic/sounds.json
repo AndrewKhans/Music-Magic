@@ -1,9 +1,18 @@
 {
-  "guitarSound": {
+  "mandolinStrum": {
     "category": "players",
     "sounds": [
       {
-        "name": "musicmagic:guitarNoise",
+        "name": "musicmagic:mandolinStrum",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinPluck": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinPluck",
         "stream": false
       }
     ]

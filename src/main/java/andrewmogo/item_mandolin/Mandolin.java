@@ -1,58 +1,30 @@
 package andrewmogo.item_mandolin;
 
 
-import andrewmogo.ClientOnlyProxy;
-//import andrewmogo.Sounds.SoundRegistrator;
 import andrewmogo.SoundHandler;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.settings.KeyBinding;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.item.EntityEnderPearl;
-import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.*;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.common.eventhandler.EventPriority;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.input.Keyboard;
-import org.lwjgl.opengl.GL11;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class Mandolin extends Item
 {
-
-    private static ResourceLocation location = new ResourceLocation("musicmagic", "guitarSound");
-    private static SoundEvent event = new SoundEvent(location);
+    public boolean strumMode = false;
 
     public Mandolin() {
         this.setMaxStackSize(1);
         this.setCreativeTab(CreativeTabs.TOOLS);
     }
 
-    // This onItemRightClick code is mainly taken from "Not Enough Wands" (https://github.com/romelo333/notenoughwands1.8.8)
+
+    // This code is mainly taken from "Not Enough Wands" (https://github.com/romelo333/notenoughwands1.8.8)
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-
-//        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
-//            // Give infinite nausea
-//        }
-        SoundHandler.playMandolinStrum(player, 0.5F, 1.0F);
 
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote) {
@@ -118,32 +90,20 @@ public class Mandolin extends Item
     }
 
 
-    @Override
-    public void addInformation(ItemStack stack, World player, List list, ITooltipFlag b) {
-        super.addInformation(stack, player, list, b);
-        list.add("Note 1: C#");
-        list.add("Note 2: D");
-        list.add("Note 3: E");
-    }
+    // This code is mainly taken from "Not Enough Wands" (https://github.com/romelo333/notenoughwands1.8.8)
+    public void spellTeleport(World world, EntityPlayer player, EnumHand hand) {
 
-
-    /*
-    @SubscribeEvent
-    public void onClientTick(TickEvent.ClientTickEvent event) {
-        System.out.println("Key Input Event");
-
-        // make local copy of key binding array
-        KeyBinding[] keyBindings = ClientOnlyProxy.keyBindings;
-
-        // check each enumerated key binding type for pressed and take appropriate action
-        if (keyBindings[0].isPressed()) {
-            // DEBUG
-            System.out.println("Key binding =" + keyBindings[0].getKeyDescription());
-
-            // do stuff for this key binding here
-            // remember you may need to send packet to server
-        }
+        // Make sure hand is passed by reference since it gets returned in OnItemRightClick
+        // (Or maybe just make spellTeleport return the hand?
 
     }
-    */
+
+    //      Adds a tooltip to the mandolin
+//    @Override
+//    public void addInformation(ItemStack stack, World player, List list, ITooltipFlag b) {
+//        super.addInformation(stack, player, list, b);
+//        list.add("Note 1: C#");
+//        list.add("Note 2: D");
+//        list.add("Note 3: E");
+//    }
 }
