@@ -20,9 +20,7 @@ public class KeyBinds {
 
         // register all the key bindings
         for (KeyBinding keybind : keyBindings)
-        {
             ClientRegistry.registerKeyBinding(keybind);
-        }
     }
 
 }

@@ -17,16 +17,40 @@ public class SoundHandler {
     private static SoundEvent mandolinStrum = new SoundEvent(
             new ResourceLocation("musicmagic", "mandolinStrum")
     );
-    private static SoundEvent mandolinPluck = new SoundEvent(
-            new ResourceLocation("musicmagic", "mandolinPluck")
+
+    public static void playMandolinStrum(EntityPlayer player, float volume, int pitch) {
+        WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
+        if (pitch == 1)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
+        if (pitch == 2)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
+        if (pitch == 3)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
+    }
+
+    // Mandolin Pluck
+
+    // G is the lowest
+    // D
+    // A is the highest
+
+    private static SoundEvent mandolinPluckA = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinPluckA")
+    );
+    private static SoundEvent mandolinPluckD = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinPluckD")
+    );
+    private static SoundEvent mandolinPluckG = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinPluckG")
     );
 
-    public static void playMandolinStrum(EntityPlayer player, float volume, float pitch) {
+    public static void playMandolinPluck(EntityPlayer player, float volume, int pitch) {
         WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
-        worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, pitch);
-    }
-    public static void playMandolinPluck(EntityPlayer player, float volume, float pitch) {
-        WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
-        worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluck, SoundCategory.PLAYERS, volume, pitch);
+        if (pitch == 1)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckG, SoundCategory.PLAYERS, volume, 1.0F);
+        if (pitch == 2)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckD, SoundCategory.PLAYERS, volume, 1.0F);
+        if (pitch == 3)
+            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckA, SoundCategory.PLAYERS, volume, 1.0F);
     }
 }

@@ -8,11 +8,29 @@
       }
     ]
   },
-  "mandolinPluck": {
+  "mandolinPluckG": {
     "category": "players",
     "sounds": [
       {
-        "name": "musicmagic:mandolinPluck",
+        "name": "musicmagic:mandolinPluckG",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinPluckD": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinPluckD",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinPluckA": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinPluckA",
         "stream": false
       }
     ]
