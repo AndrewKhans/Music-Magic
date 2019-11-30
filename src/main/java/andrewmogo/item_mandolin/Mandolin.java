@@ -3,6 +3,7 @@ package andrewmogo.item_mandolin;
 
 import andrewmogo.ClientOnlyProxy;
 //import andrewmogo.Sounds.SoundRegistrator;
+import andrewmogo.SoundHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.client.util.ITooltipFlag;
@@ -34,8 +35,9 @@ import java.util.List;
 
 public class Mandolin extends Item
 {
-    private ResourceLocation location = new ResourceLocation("musicmagic", "guitarSound");
-    private SoundEvent event = new SoundEvent(location);
+
+    private static ResourceLocation location = new ResourceLocation("musicmagic", "guitarSound");
+    private static SoundEvent event = new SoundEvent(location);
 
     public Mandolin() {
         this.setMaxStackSize(1);
@@ -46,19 +48,14 @@ public class Mandolin extends Item
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
+
 //        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
 //            // Give infinite nausea
 //        }
+        SoundHandler.playMandolinStrum(player, 0.5F, 1.0F);
 
         ItemStack stack = player.getHeldItem(hand);
         if (!world.isRemote) {
-
-            // Play strum sound
-            world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, event, SoundCategory.PLAYERS, 1.0F, 1.0F);
-            System.out.println("Strummed!");
-
-//          world.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-
 
             // Teleport Code
 

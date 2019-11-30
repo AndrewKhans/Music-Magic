@@ -18,9 +18,9 @@ public class KeyBinds {
         keyBindings[2] = new KeyBinding("key.note3.desc", Keyboard.KEY_C, "key.musicmagic.category");
 
         // register all the key bindings
-        for (int i = 0; i < keyBindings.length; ++i)
+        for (KeyBinding keybind : keyBindings)
         {
-            ClientRegistry.registerKeyBinding(keyBindings[i]);
+            ClientRegistry.registerKeyBinding(keybind);
         }
     }
 

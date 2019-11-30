@@ -11,4 +11,14 @@ Piano Block:
 
 Wizard armor/robes:
 
+
+
+//        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
+//            // Give infinite nausea
+//        }
+
+
+
 Removing files from github: add it to .gitignore, and do "git rm -r --cached .idea" in terminal, where .idea is the filename
+
+
