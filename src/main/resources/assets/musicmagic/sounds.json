@@ -1,18 +1,9 @@
 {
-  "mandolinStrum": {
+  "mandolinPluckA": {
     "category": "players",
     "sounds": [
       {
-        "name": "musicmagic:mandolinStrum",
-        "stream": false
-      }
-    ]
-  },
-  "mandolinPluckG": {
-    "category": "players",
-    "sounds": [
-      {
-        "name": "musicmagic:mandolinPluckG",
+        "name": "musicmagic:mandolinPluckA",
         "stream": false
       }
     ]
@@ -26,11 +17,38 @@
       }
     ]
   },
-  "mandolinPluckA": {
+  "mandolinPluckG": {
     "category": "players",
     "sounds": [
       {
-        "name": "musicmagic:mandolinPluckA",
+        "name": "musicmagic:mandolinPluckG",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinStrumA": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinStrumA",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinStrumD": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinStrumD",
+        "stream": false
+      }
+    ]
+  },
+  "mandolinStrumG": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "musicmagic:mandolinStrumG",
         "stream": false
       }
     ]

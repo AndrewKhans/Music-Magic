@@ -9,30 +9,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 
 public class SoundHandler {
 
-//    private static ResourceLocation location = new ResourceLocation("musicmagic", "mandolinStrum");
-//    private static SoundEvent mandolinStrum = new SoundEvent(location);
-////    location = new ResourceLocation("musicmagic", "guitarSound");
-//    private static SoundEvent mandolinPluck = new SoundEvent(location);
-
-    private static SoundEvent mandolinStrum = new SoundEvent(
-            new ResourceLocation("musicmagic", "mandolinStrum")
-    );
-
-    public static void playMandolinStrum(EntityPlayer player, float volume, int pitch) {
-        WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
-        if (pitch == 1)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
-        if (pitch == 2)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
-        if (pitch == 3)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinStrum, SoundCategory.PLAYERS, volume, 1.0F);
-    }
-
-    // Mandolin Pluck
-
-    // G is the lowest
-    // D
-    // A is the highest
+    // Pluck
 
     private static SoundEvent mandolinPluckA = new SoundEvent(
             new ResourceLocation("musicmagic", "mandolinPluckA")
@@ -44,13 +21,45 @@ public class SoundHandler {
             new ResourceLocation("musicmagic", "mandolinPluckG")
     );
 
-    public static void playMandolinPluck(EntityPlayer player, float volume, int pitch) {
+    public static void playMandolinPluck(EntityPlayer player, float volume, char note) {
         WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
-        if (pitch == 1)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckG, SoundCategory.PLAYERS, volume, 1.0F);
-        if (pitch == 2)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckD, SoundCategory.PLAYERS, volume, 1.0F);
-        if (pitch == 3)
-            worldServer.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, mandolinPluckA, SoundCategory.PLAYERS, volume, 1.0F);
+        switch (note) {
+            case 'A':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinPluckA, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+            case 'D':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinPluckD, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+            case 'G':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinPluckG, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+        }
+    }
+
+    // Strum
+
+    private static SoundEvent mandolinStrumA = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinStrumA")
+    );
+    private static SoundEvent mandolinStrumD = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinStrumD")
+    );
+    private static SoundEvent mandolinStrumG = new SoundEvent(
+            new ResourceLocation("musicmagic", "mandolinStrumG")
+    );
+
+    public static void playMandolinStrum(EntityPlayer player, float volume, char note) {
+        WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
+        switch (note) {
+            case 'A':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinStrumA, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+            case 'D':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinStrumD, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+            case 'G':
+                worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, mandolinStrumG, SoundCategory.PLAYERS, volume, 1.0F);
+                break;
+        }
     }
 }

@@ -1,4 +1,6 @@
-Piano Block:
+FEATURES TO ADD:
+
+-Piano Block:
 
   -Crafting:
   wooden slab = w
@@ -9,16 +11,17 @@ Piano Block:
 
   -Using it: there is 3 strings (each is a note), you configure them and press play to play the notes
 
-Wizard armor/robes:
+-Wizard armor/robes
 
+-Mandolin
+    Rather than pluck and strum, make it pluck and chord ('A' chord plays the A major chord...)
 
+//if(player.getGameProfile().getName().equals("paul325")) {    //maybe use get id?
+//   // Give infinite nausea
+//}
 
-//        if(player.getGameProfile().getName() == "paul325") {    //maybe use get id?
-//            // Give infinite nausea
-//        }
+Working Notes:
 
-
-
-Removing files from github: add it to .gitignore, and do "git rm -r --cached .idea" in terminal, where .idea is the filename
+-Removing files from github: add it to .gitignore, and do "git rm -r --cached .idea" in terminal, where .idea is the filename
 
 
