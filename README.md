@@ -11,3 +11,4 @@ A mod based around using musical instruments to cast spells
 ## Acknowledgments
 
 * TheGreyGhost - Provided example mod starter code [GitHub](https://github.com/TheGreyGhost)
+* SamplePhonics - Mandolin sound effects ["Sensory Mutations"](https://app.noiiz.com/sounds/packs/195)
