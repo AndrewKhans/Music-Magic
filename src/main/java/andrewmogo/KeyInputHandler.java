@@ -32,21 +32,18 @@ public class KeyInputHandler {
                     SoundHandler.playMandolinStrum(player, 0.5F, 'A');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum1");
-                    System.out.println("Strum 1");
                 }
                 if (KeyBinds.keyBindings[1].isPressed())    // If note 2 is pressed
                 {
                     SoundHandler.playMandolinStrum(player, 0.5F, 'D');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum2");
-                    System.out.println("Strum 2");
                 }
                 if (KeyBinds.keyBindings[2].isPressed())    // If note 3 is pressed
                 {
                     SoundHandler.playMandolinStrum(player, 0.5F, 'G');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum3");
-                    System.out.println("Strum 3");
                 }
             } else {
                 if (KeyBinds.keyBindings[0].isPressed())    // If note 1 is pressed
@@ -54,21 +51,18 @@ public class KeyInputHandler {
                     SoundHandler.playMandolinPluck(player, 0.5F, 'A');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Pluck1");
-                    System.out.println("Pluck 1");
                 }
                 if (KeyBinds.keyBindings[1].isPressed())    // If note 2 is pressed
                 {
                     SoundHandler.playMandolinPluck(player,0.5F, 'D');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Pluck2");
-                    System.out.println("Pluck 2");
                 }
                 if (KeyBinds.keyBindings[2].isPressed())    // If note 3 is pressed
                 {
                     SoundHandler.playMandolinPluck(player,0.5F, 'G');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Pluck3");
-                    System.out.println("Pluck 3");
                 }
             }
         }
