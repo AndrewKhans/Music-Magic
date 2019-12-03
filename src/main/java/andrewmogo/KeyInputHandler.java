@@ -29,19 +29,19 @@ public class KeyInputHandler {
             if (((Mandolin)heldItem).strumMode) {
                 if (KeyBinds.keyBindings[0].isPressed())    // If note 1 is pressed
                 {
-                    SoundHandler.playMandolinStrum(player, 0.5F, 'A');
+                    SoundHandler.playMandolinStrum(player, 1.0F, 'A');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum1");
                 }
                 if (KeyBinds.keyBindings[1].isPressed())    // If note 2 is pressed
                 {
-                    SoundHandler.playMandolinStrum(player, 0.5F, 'D');
+                    SoundHandler.playMandolinStrum(player, 1.0F, 'D');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum2");
                 }
                 if (KeyBinds.keyBindings[2].isPressed())    // If note 3 is pressed
                 {
-                    SoundHandler.playMandolinStrum(player, 0.5F, 'G');
+                    SoundHandler.playMandolinStrum(player, 1.0F, 'G');
                     ((Mandolin)heldItem).noteAdded = true;
                     ((Mandolin)heldItem).noteOrder.add("Strum3");
                 }

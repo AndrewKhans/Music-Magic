@@ -1,9 +1,12 @@
 package andrewmogo.item_mandolin;
 
+import andrewmogo.item_musicbook.Musicbook;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.*;
 import net.minecraft.util.*;
@@ -14,6 +17,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Mandolin extends Item
 {
@@ -45,12 +49,12 @@ public class Mandolin extends Item
     }
 
     private void selectSpell() {
-        if (noteOrder.equals(new ArrayList<String>() {{     // Open Spell Research GUI / Guide
+        if (noteOrder.equals(new ArrayList<String>() {{            // Summon Musicbook
             add("Pluck1");
             add("Pluck1");
             add("Pluck1");
         }})) {
-            spellOpenGui();
+            spellSummonMusicbook();
         } else if (noteOrder.equals(new ArrayList<String>() {{     // Teleport
             add("Pluck1");
             add("Pluck2");
@@ -71,8 +75,11 @@ public class Mandolin extends Item
 //        return ActionResult.newResult(EnumActionResult.PASS, stack);
 //    }
 
-    private void spellOpenGui() {
-
+    private void spellSummonMusicbook() {
+        EntityPlayer player = Minecraft.getMinecraft().player;
+        Item book = new Musicbook();    // This is the problem line
+        ItemStack stack = new ItemStack(book);
+        player.inventory.addItemStackToInventory(stack);
     }
     // This code is taken from "Not Enough Wands" (https://github.com/romelo333/notenoughwands1.8.8)
     private void spellTeleport() {
@@ -136,6 +143,13 @@ public class Mandolin extends Item
         WorldServer worldServer = FMLCommonHandler.instance().getMinecraftServerInstance().getWorld(player.dimension);
         worldServer.playSound((EntityPlayer) null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ENDERMEN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 //        System.out.println("PlayedSound");
+    }
+
+    @Override
+    public void addInformation(ItemStack stack, World player, List list, ITooltipFlag b) {
+        super.addInformation(stack, player, list, b);
+        list.add("Summon Musicbook:");
+        list.add("Pluck1-Pluck1-Pluck1");
     }
 
 }

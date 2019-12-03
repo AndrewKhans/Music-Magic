@@ -20,10 +20,8 @@ public abstract class CommonProxy {
     {
         //read config first
         // This should call the preInitCommon() of all the items/blocks
-//        MinecraftForge.EVENT_BUS.register(new SoundRegisterListener());
         andrewmogo.item_mandolin.StartupCommon.preInitCommon();
-
-
+        andrewmogo.item_musicbook.StartupCommon.preInitCommon();
     }
 
     /**
@@ -34,6 +32,7 @@ public abstract class CommonProxy {
     {
         // This should call the initCommon of all the items/blocks
         andrewmogo.item_mandolin.StartupCommon.initCommon();
+        andrewmogo.item_musicbook.StartupCommon.initCommon();
 
     }
 
@@ -45,6 +44,7 @@ public abstract class CommonProxy {
 
         // This should call the postInitCommon() of each item/block
         andrewmogo.item_mandolin.StartupCommon.postInitCommon();
+        andrewmogo.item_musicbook.StartupCommon.postInitCommon();
 
     }
 

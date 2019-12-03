@@ -13,9 +13,6 @@ FEATURES TO ADD:
 
 -Wizard armor/robes
 
--Mandolin
-    Rather than pluck and strum, make it pluck and chord ('A' chord plays the A major chord...)
-
 //if(player.getGameProfile().getName().equals("paul325")) {    //maybe use get id?
 //   // Give infinite nausea
 //}

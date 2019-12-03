@@ -23,6 +23,7 @@ public class ClientOnlyProxy extends CommonProxy
     {
         super.preInit();
         andrewmogo.item_mandolin.StartupClientOnly.preInitClientOnly();
+        andrewmogo.item_musicbook.StartupClientOnly.preInitClientOnly();
     }
 
     /**
@@ -36,6 +37,7 @@ public class ClientOnlyProxy extends CommonProxy
         super.init();
 
         andrewmogo.item_mandolin.StartupClientOnly.initClientOnly();
+        andrewmogo.item_musicbook.StartupClientOnly.initClientOnly();
     }
 
     /**
@@ -45,6 +47,7 @@ public class ClientOnlyProxy extends CommonProxy
     {
         super.postInit();
         andrewmogo.item_mandolin.StartupClientOnly.postInitClientOnly();
+        andrewmogo.item_musicbook.StartupClientOnly.postInitClientOnly();
     }
 
     @Override

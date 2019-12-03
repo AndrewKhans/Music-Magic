@@ -1,0 +1,4 @@
+The Musicbook
+
+- The musicbook is where you go to unlock spells, and view which spells you already have unlocked
+- Ask Prasant to draw a book texture for his
